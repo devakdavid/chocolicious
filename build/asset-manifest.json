@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/chocolicious/static/css/main.bf2fe313.css",
+    "main.js": "/chocolicious/static/js/main.779de458.js",
+    "static/media/image5.jpg": "/chocolicious/static/media/image5.daf6013abd04711996f1.jpg",
+    "static/media/image1.jpg": "/chocolicious/static/media/image1.985eb242efaedaf8f297.jpg",
+    "static/media/image4.jpg": "/chocolicious/static/media/image4.d8de98fee3b8309ecc76.jpg",
+    "static/media/image6.jpg": "/chocolicious/static/media/image6.824fb9d4cc3addcdee20.jpg",
+    "static/media/image3.jpg": "/chocolicious/static/media/image3.c49e4c3ff3a0ea56973e.jpg",
+    "static/media/image2.jpg": "/chocolicious/static/media/image2.7730ef7055ef488b1ad1.jpg",
+    "static/media/image7.jpg": "/chocolicious/static/media/image7.3e29790d5529cf6248cf.jpg",
+    "static/media/image8.jpg": "/chocolicious/static/media/image8.084fb5dddcfb9ae21bcb.jpg",
+    "index.html": "/chocolicious/index.html",
+    "main.bf2fe313.css.map": "/chocolicious/static/css/main.bf2fe313.css.map",
+    "main.779de458.js.map": "/chocolicious/static/js/main.779de458.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf2fe313.css",
+    "static/js/main.779de458.js"
+  ]
+}

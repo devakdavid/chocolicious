@@ -12,7 +12,6 @@
  */
 
 import React, { createContext, useContext, useReducer } from 'react'
-import { faker } from '@faker-js/faker';
 import { cartReducer, productFilterReducer } from './Reducers';
 import image1 from '../images/image1.jpg';
 import image2 from '../images/image2.jpg';
@@ -31,8 +30,6 @@ const Cart = createContext(); //name of the context
  * using seed faker generates only one type of data
  * its not going to change everytime the data is called
  */
-faker.seed(99); 
-
 const CartContext = ({ children }) => {
 
   /**
