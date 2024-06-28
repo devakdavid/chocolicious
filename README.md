@@ -1,4 +1,3 @@
-
 # A React E-Commerce Application
 
 ## About the project -
@@ -26,7 +25,15 @@ There is also a "clear filters" button that clears all the currently applied fil
 - This application is fully responsive.
 
 ## Work Flow -
-test
-<img src="src\images\Chocolicious_Logo_180x.avif" alt="An example image">
-=======
-# chocolicious
+
+<img src="src\images\ShopX.jpg" alt="An example image">
+
+## Live project link -
+
+https://shopxreact.web.app/ 
+or
+https://shopxreact.firebaseapp.com/
+
+## Preview -
+![image](https://github.com/DebasmitaMallick/React-e-Commerce-Website/assets/67649413/58c4127e-012b-4288-8aac-153c57f549f1)
+
