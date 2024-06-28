@@ -14,6 +14,14 @@
 import React, { createContext, useContext, useReducer } from 'react'
 import { faker } from '@faker-js/faker';
 import { cartReducer, productFilterReducer } from './Reducers';
+import image1 from '../images/image1.jpg';
+import image2 from '../images/image2.jpg';
+import image3 from '../images/image3.jpg';
+import image4 from '../images/image4.jpg';
+import image5 from '../images/image5.jpg';
+import image6 from '../images/image6.jpg';
+import image7 from '../images/image7.jpg';
+import image8 from '../images/image8.jpg';
 
 const Cart = createContext(); //name of the context
 
@@ -32,15 +40,81 @@ const CartContext = ({ children }) => {
    * ...Array(20) will create an arry with 20 undefined elements
    * thus creating this object with fake data 20 times and storing in products array
    */
-  const products = [...Array(20)].map(() => ({
-    id: faker.datatype.uuid(),
-    name: faker.commerce.productName(),
-    price: faker.commerce.price(),
-    image: `${faker.image.food()}?random=${Math.round(Math.random() * 5000)}`,
-    inStock: faker.helpers.arrayElement([0, 3, 5, 6, 7]),
-    fastDelivery: faker.datatype.boolean(),
-    ratings: faker.helpers.arrayElement([1, 2, 3, 4, 5]),
-  }));
+    const products = [
+        {
+            id: '1',
+            name: 'Choco Nutz',
+            price: 18.99,
+            image: image1, // Use the imported image
+            inStock: 5,
+            fastDelivery: true,
+            ratings: 4,
+        },
+        {
+            id: '2',
+            name: 'Raspberry Chocoz',
+            price: 29.80,
+            image: image2, // Use the imported image
+            inStock: 3,
+            fastDelivery: false,
+            ratings: 5,
+        },
+        {
+            id: '3',
+            name: 'Choco Sprinkles',
+            price: 19.99,
+            image: image3, // Use the imported image
+            inStock: 2,
+            fastDelivery: false,
+            ratings: 5,
+        },
+        {
+            id: '4',
+            name: 'Choco Delights',
+            price: 29.00,
+            image: image4, // Use the imported image
+            inStock: 1,
+            fastDelivery: false,
+            ratings: 3,
+        },
+        {
+            id: '5',
+            name: 'Choco Treat',
+            price: 19.99,
+            image: image5, // Use the imported image
+            inStock: 5,
+            fastDelivery: true,
+            ratings: 4,
+        },
+        {
+            id: '6',
+            name: 'ChocoMarsh',
+            price: 9.22,
+            image: image6, // Use the imported image
+            inStock: 6,
+            fastDelivery: false,
+            ratings: 5,
+        },
+        {
+            id: '7',
+            name: 'Milk Choco',
+            price: 29.90,
+            image: image7, // Use the imported image
+            inStock: 2,
+            fastDelivery: false,
+            ratings: 2,
+        },
+        {
+            id: '8',
+            name: 'Simple Choco',
+            price: 29.99,
+            image: image8, // Use the imported image
+            inStock: 8,
+            fastDelivery: false,
+            ratings: 1,
+        },
+    ];
+
   
   /**
    * useReducer Hook for cart

@@ -31,7 +31,7 @@ const SingleProduct = ({ prod }) => { //getting a product object as a prop
           <Card.Body className={`${theme === 'light' ? 'lightCard' : 'darkCard'}`}>
             <Card.Title>{prod.name}</Card.Title>
             <Card.Subtitle style={{ paddingBottom: 10 }}>
-              <span style={{fontSize: '1.2rem'}}>₹ {prod.price.split('.')[0]}</span>
+                          <span style={{fontSize: '1.2rem'}}>£ {prod.price.toFixed(2)}</span>
               {prod.fastDelivery ? (
                 <div>Fast Delivery</div>
               ) : (

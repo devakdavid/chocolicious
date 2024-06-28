@@ -69,7 +69,7 @@ const CheckoutForm = () => {
       name: name,
       ref_no: referenceNo,
       order_date: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
-      total: `₹ ${grandtotal} ` 
+      total: `£ ${grandtotal} ` 
     };
     
     emailjs.send(

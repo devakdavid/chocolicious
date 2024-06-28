@@ -46,7 +46,7 @@ const Header = () => {
                             {/* Containg the logo */}
                             <Navbar.Brand style={{color: theme === 'dark' && 'white'}}>
                                 <Link to='/'>
-                                    <AiOutlineShoppingCart fontSize='50px'/> ShopX
+                                    <AiOutlineShoppingCart fontSize='50px' /> Chocolicious
                                 </Link>
                             </Navbar.Brand>
                         </div>
@@ -79,7 +79,7 @@ const Header = () => {
                                                             />
                                                             <div className="cartItemDetail">
                                                                 <span>{prod.name}</span>
-                                                                <span>₹ {prod.price.split('.')[0]}</span>
+                                                                <span>£ {prod.price.toFixed(2)}</span>
                                                             </div>
                                                             <AiFillDelete
                                                                 fontSize='20px'
