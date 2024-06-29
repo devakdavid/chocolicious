@@ -2,7 +2,7 @@
   "name": "shopping_cart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://devakdavid.github.io/chocolicious",
+  "homepage": "http://devak.org",
   "dependencies": {
     "@google-pay/button-react": "^3.0.6",
     "@stripe/react-stripe-js": "^2.1.0",
