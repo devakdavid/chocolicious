@@ -9,14 +9,13 @@
 /coverage
 
 # production
-#/build
+
 
 hosting.YnVpbGQ.cache
 
 # misc
 .vs
 .vscode/*
-!.vscode/extensions.json
 .env
 .DS_Store
 .env.local
