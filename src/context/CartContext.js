@@ -40,7 +40,7 @@ const CartContext = ({ children }) => {
     const products = [
         {
             id: '1',
-            name: 'Choco Nutz',
+            name: 'Marsholicious Nutz',
             price: 18.99,
             image: image1, // Use the imported image
             inStock: 5,
@@ -58,7 +58,7 @@ const CartContext = ({ children }) => {
         },
         {
             id: '3',
-            name: 'Choco Sprinkles',
+            name: 'Marsholicious Sprinkles',
             price: 19.99,
             image: image3, // Use the imported image
             inStock: 2,
@@ -67,7 +67,7 @@ const CartContext = ({ children }) => {
         },
         {
             id: '4',
-            name: 'Choco Delights',
+            name: 'Marsholicious Delights',
             price: 29.00,
             image: image4, // Use the imported image
             inStock: 1,
@@ -76,7 +76,7 @@ const CartContext = ({ children }) => {
         },
         {
             id: '5',
-            name: 'Choco Treat',
+            name: 'Marsholicious Treat',
             price: 19.99,
             image: image5, // Use the imported image
             inStock: 5,
@@ -85,7 +85,7 @@ const CartContext = ({ children }) => {
         },
         {
             id: '6',
-            name: 'ChocoMarsh',
+            name: 'Marsholicious',
             price: 9.22,
             image: image6, // Use the imported image
             inStock: 6,

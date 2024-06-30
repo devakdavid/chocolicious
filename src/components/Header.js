@@ -8,6 +8,7 @@ import { useTheme } from '../context/ThemeContextProvider';
 import { useWindowSize } from '../hooks/useWindowSize';
 import { useFilterBarState } from '../context/FilterBar';
 import SearchBar from './SearchBar';
+import Chocolicious_Logo_180x from '../images/Chocolicious_Logo_180x.png';
 
 const Header = () => {
 
@@ -40,13 +41,19 @@ const Header = () => {
         <>
             <div className='header'>
                 {/* Top navbar STARTS ------------ */}
-                <Navbar style={{height: 80}} className={`${theme === 'light' ? 'lightHeader' : 'darkHeader'}`}>
+                <Navbar style={{ height: 100 }} className={`${theme === 'light' ? 'lightHeader' : 'darkHeader'}`}>
                     <Container>
                         <div className='navLeftItems'>
                             {/* Containg the logo */}
-                            <Navbar.Brand style={{color: theme === 'dark' && 'white'}}>
+                            <Navbar.Brand style={{ color: theme === 'dark' && 'white' }}>
                                 <Link to='/'>
-                                    <AiOutlineShoppingCart fontSize='50px' /> Chocolicious
+                                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                        <AiOutlineShoppingCart fontSize='50px' />
+                                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                            <img src={Chocolicious_Logo_180x} alt="Chocolicious Logo" style={{ height: '60px', width: 'auto' }} />
+                                        </div>
+                                        <span style={{ fontFamily: 'Chango', fontSize: '30px', marginLeft: '50px', fontStyle: 'italic' }}>Arbory Primary Year 6 School Project</span>
+                                    </div>
                                 </Link>
                             </Navbar.Brand>
                         </div>
@@ -66,44 +73,44 @@ const Header = () => {
 
                                 <Dropdown.Menu style={{ minWidth: 370, left: '-17.7rem', zIndex: 2 }}>
                                     {
-                                        cart.length > 0 ? 
-                                        (
-                                            <>
-                                                {
-                                                    cart.map( prod => (
-                                                        <span className='cartItem' key={prod.id}>
-                                                            <img 
-                                                                src={prod.image}
-                                                                className='cartItemImg'
-                                                                alt={prod.name}
-                                                            />
-                                                            <div className="cartItemDetail">
-                                                                <span>{prod.name}</span>
-                                                                <span>£ {prod.price.toFixed(2)}</span>
-                                                            </div>
-                                                            <AiFillDelete
-                                                                fontSize='20px'
-                                                                style={{ cursor: 'pointer' }}
-                                                                onClick={() => 
-                                                                    dispatch({
-                                                                        type: 'REMOVE_FROM_CART',
-                                                                        payload: prod
-                                                                    })
-                                                                }
-                                                            />
-                                                        </span>
-                                                    ))
-                                                }
-                                                <Link to='/cart'>
-                                                    <Button style={{ width: '95%', margin: '0 10px' }}>
-                                                        Go To Cart
-                                                    </Button>
-                                                </Link>
-                                            </>
-                                        ) :
-                                        (
-                                            <span style={{ padding: 10 }}>Cart is Empty!</span>
-                                        )
+                                        cart.length > 0 ?
+                                            (
+                                                <>
+                                                    {
+                                                        cart.map(prod => (
+                                                            <span className='cartItem' key={prod.id}>
+                                                                <img
+                                                                    src={prod.image}
+                                                                    className='cartItemImg'
+                                                                    alt={prod.name}
+                                                                />
+                                                                <div className="cartItemDetail">
+                                                                    <span>{prod.name}</span>
+                                                                    <span>£ {prod.price.toFixed(2)}</span>
+                                                                </div>
+                                                                <AiFillDelete
+                                                                    fontSize='20px'
+                                                                    style={{ cursor: 'pointer' }}
+                                                                    onClick={() =>
+                                                                        dispatch({
+                                                                            type: 'REMOVE_FROM_CART',
+                                                                            payload: prod
+                                                                        })
+                                                                    }
+                                                                />
+                                                            </span>
+                                                        ))
+                                                    }
+                                                    <Link to='/cart'>
+                                                        <Button style={{ width: '95%', margin: '0 10px' }}>
+                                                            Go To Cart
+                                                        </Button>
+                                                    </Link>
+                                                </>
+                                            ) :
+                                            (
+                                                <span style={{ padding: 10 }}>Cart is Empty!</span>
+                                            )
                                     }
                                 </Dropdown.Menu>
                             </Dropdown>
@@ -119,9 +126,9 @@ const Header = () => {
 
                         {/* - Hamberger icon for sidebar toggling on smaller sceen
                             - Only visible on smaller sceen ( width < 1100) */}
-                        <div 
-                            className='navLeftItems filterMenuIcon' 
-                            style={{display: windowSize.width > 1100 && 'none'}} 
+                        <div
+                            className='navLeftItems filterMenuIcon'
+                            style={{ display: windowSize.width > 1100 && 'none' }}
                             onClick={() => setVisible(!visible)}
                         >
                             <FaBars fontSize='25px' />
@@ -139,23 +146,23 @@ const Header = () => {
                             {/* search button */}
                             <span className='searchIcon m-auto' onClick={() => setsearchBarVisible(!searchBarVisible)}>
                                 {
-                                    !searchBarVisible ? 
-                                    <FaSearch fontSize='20px' /> :
-                                    <span style={{ fontSize: 20 }}>X</span>
+                                    !searchBarVisible ?
+                                        <FaSearch fontSize='20px' /> :
+                                        <span style={{ fontSize: 20 }}>X</span>
                                 }
-                    
+
                             </span>
 
                             {/* Home button */}
                             <Link to='/'>
                                 <FaHome fontSize='25px' className='ms-3 mt-2' />
                             </Link>
-                            
+
                             {/* Theme button */}
                             <span onClick={themeHandler} className='themeLogo ms-3 mt-1'>
-                            {
-                                theme === 'light' ? <FaMoon /> : <FaSun />
-                            }
+                                {
+                                    theme === 'light' ? <FaMoon /> : <FaSun />
+                                }
                             </span>
 
                         </Nav>

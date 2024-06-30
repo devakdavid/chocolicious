@@ -42,6 +42,7 @@ const TestCards = () => {
                                 <th>Card No.</th>
                                 <th>CSV</th>
                                 <th>Date</th>
+                                <th>Zip</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,6 +66,7 @@ const TestCards = () => {
                                     </td>
                                     <td>Any 3 digits</td>
                                     <td>Any future date</td>
+                                    <td>Use 90210</td>
                                 </tr>
                             )
                         }

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fa9471ca.css",
+    "main.js": "/static/js/main.c7a74006.js",
+    "static/media/image1.jpg": "/static/media/image1.f4cb3b381ebadaeea771.jpg",
+    "static/media/image2.jpg": "/static/media/image2.ac971846206aabeed427.jpg",
+    "static/media/image3.jpg": "/static/media/image3.8b195ba80add967d5fd2.jpg",
+    "static/media/image4.jpg": "/static/media/image4.40eea60b2dd76a19cb2e.jpg",
+    "static/media/image6.jpg": "/static/media/image6.c94a9cb83038d9699aab.jpg",
+    "static/media/image7.jpg": "/static/media/image7.a22800d7cc2b37609be4.jpg",
+    "static/media/image5.jpg": "/static/media/image5.127316811717f0039d23.jpg",
+    "static/media/image8.jpg": "/static/media/image8.de48a83a4365726e563a.jpg",
+    "static/media/Chocolicious_Logo_180x.png": "/static/media/Chocolicious_Logo_180x.4cb2f97389c4e2ba706b.png",
+    "index.html": "/index.html",
+    "main.fa9471ca.css.map": "/static/css/main.fa9471ca.css.map",
+    "main.c7a74006.js.map": "/static/js/main.c7a74006.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa9471ca.css",
+    "static/js/main.c7a74006.js"
+  ]
+}

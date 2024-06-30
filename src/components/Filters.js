@@ -1,5 +1,3 @@
-// Sidebar Component
-
 import React from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { CartState } from '../context/CartContext';
@@ -9,22 +7,22 @@ import { useWindowSize } from '../hooks/useWindowSize';
 import Rating from './Rating'
 
 const Filters = () => {
-    const { productFilterState : {
-                byStock, byFastDelivery, sort, byRating
-            }, 
-            productFilterDispatch 
+    const { productFilterState: {
+        byStock, byFastDelivery, sort, byRating
+    },
+        productFilterDispatch
     } = CartState();
 
     const { theme } = useTheme();
 
     const windowSize = useWindowSize();
 
-    const {visible} = useFilterBarState();
-    
+    const { visible } = useFilterBarState();
+
     return (
-        <div 
-            className={`filters ${theme === 'light' ? 'lightFilter' : 'darkFilter'}`} 
-            style={{display: windowSize.width <= 1100 && !visible && 'none'}}
+        <div
+            className={`filters ${theme === 'light' ? 'lightFilter' : 'darkFilter'}`}
+            style={{ display: windowSize.width <= 1100 && !visible && 'none' }}
         >
             <span className="title">Filter Products</span>
             <span>
@@ -38,7 +36,7 @@ const Filters = () => {
                         type: 'SORT_BY_PRICE',
                         payload: 'lowToHigh',
                     })}
-                    checked= {sort === 'lowToHigh' ? true : false}
+                    checked={sort === 'lowToHigh' ? true : false}
                 />
             </span>
             <span>
@@ -52,7 +50,7 @@ const Filters = () => {
                         type: 'SORT_BY_PRICE',
                         payload: 'highToLow',
                     })}
-                    checked= {sort === 'highToLow' ? true : false}
+                    checked={sort === 'highToLow' ? true : false}
                 />
             </span>
             <span>
@@ -65,7 +63,7 @@ const Filters = () => {
                     onChange={() => productFilterDispatch({
                         type: 'FILTER_BY_STOCK',
                     })}
-                    checked= {byStock}
+                    checked={byStock}
                 />
             </span>
             <span>
@@ -78,35 +76,38 @@ const Filters = () => {
                     onChange={() => productFilterDispatch({
                         type: 'FILTER_BY_DELIVERY',
                     })}
-                    checked= {byFastDelivery}
+                    checked={byFastDelivery}
                 />
             </span>
             <span>
                 <label style={{ paddingRight: 10 }}>Rating: </label>
-                <Rating 
-                    rating={byRating} 
-                    style={{ cursor: 'pointer' }} 
-                    onClick={ i => productFilterDispatch({
+                <Rating
+                    rating={byRating}
+                    style={{ cursor: 'pointer' }}
+                    onClick={i => productFilterDispatch({
                         type: 'FILTER_BY_RATING',
                         payload: i + 1,
                     })}
                 />
             </span>
-            <Button 
-                variant='light' 
+            <Button
+                variant='light'
                 onClick={() => productFilterDispatch({
                     type: 'CLEAR_FILTERS'
                 })}
             >
                 Clear Filters
             </Button>
+            <br />
+            <span style={{ fontFamily: 'Chango', fontSize: '30px', fontStyle: 'italic', textAlign: 'center' }}>
+                Done by
+                <br />
+                Devak ,Rory,Harry,
+                <br />
+                George,Lara,Betty
+            </span>
         </div>
     );
 }
 
 export default Filters;
-
-/**
- * useRef() hook creates an object with mutable variable which will not re render the component
- * it is used to access the DOM directly
- */
