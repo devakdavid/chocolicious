@@ -12,7 +12,7 @@ const CheckoutForm = () => {
     const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-
+    const [message, setMessage] = useState('');
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState(null);
@@ -67,6 +67,7 @@ const CheckoutForm = () => {
                 setName('');
                 setEmail('');
                 sendEmail();
+                navigate('/'); // Navigate back to home page immediately after payment is successful
             } catch (error) {
                 setError('Payment failed');
                 setProcessing(false);
@@ -80,7 +81,7 @@ const CheckoutForm = () => {
             name: name,
             ref_no: referenceNo,
             order_date: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
-            total: `₹ ${grandtotal} `
+            total: `£ ${grandtotal} `
         };
 
         emailjs.send(
@@ -90,7 +91,7 @@ const CheckoutForm = () => {
             EMAILJS_PUBLIC_KEY
         ).then(
             result => {
-                alert('Thanks for being a good customer! Check your email for the invoice');
+                setMessage('Thanks for being a good customer! Check your email for the invoice');
                 navigate('/');
             },
             error => console.log(error.text)
@@ -99,6 +100,7 @@ const CheckoutForm = () => {
 
     return (
         <div className='checkoutPage' ref={container}>
+            {message && <p>{message}</p>}
             <TestCards />
             <form className='checkoutForm'>
                 <div className="form-row">

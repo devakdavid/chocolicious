@@ -78,3 +78,35 @@
     display: inline-block;
     margin-right: 8px;
   }
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-brand.dark {
+        color: white;
+    }
+
+.logo-container {
+    display: 'flex';
+    justify-content: 'center';
+    align-items: 'center';
+}
+
+.logo-image-container {
+    display: 'flex';
+    justify-content: 'center';
+    align-items: 'center';
+}
+
+.logo-image {
+    height: '60px';
+    width: 'auto';
+}
+
+.logo-text {
+    font-family: 'Chango';
+    font-size: '30px';
+    margin-left: '50px';
+    font-style: 'italic';
+}

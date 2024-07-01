@@ -41,7 +41,7 @@ const CartContext = ({ children }) => {
         {
             id: '1',
             name: 'Marsholicious Nutz',
-            price: 18.99,
+            price: 3.99,
             image: image1, // Use the imported image
             inStock: 5,
             fastDelivery: true,
@@ -50,7 +50,7 @@ const CartContext = ({ children }) => {
         {
             id: '2',
             name: 'Raspberry Chocoz',
-            price: 29.80,
+            price: 2.80,
             image: image2, // Use the imported image
             inStock: 3,
             fastDelivery: false,
@@ -59,7 +59,7 @@ const CartContext = ({ children }) => {
         {
             id: '3',
             name: 'Marsholicious Sprinkles',
-            price: 19.99,
+            price: 1.99,
             image: image3, // Use the imported image
             inStock: 2,
             fastDelivery: false,
@@ -68,7 +68,7 @@ const CartContext = ({ children }) => {
         {
             id: '4',
             name: 'Marsholicious Delights',
-            price: 29.00,
+            price: 2.00,
             image: image4, // Use the imported image
             inStock: 1,
             fastDelivery: false,
@@ -77,7 +77,7 @@ const CartContext = ({ children }) => {
         {
             id: '5',
             name: 'Marsholicious Treat',
-            price: 19.99,
+            price: 1.99,
             image: image5, // Use the imported image
             inStock: 5,
             fastDelivery: true,
@@ -86,7 +86,7 @@ const CartContext = ({ children }) => {
         {
             id: '6',
             name: 'Marsholicious',
-            price: 9.22,
+            price: 2.22,
             image: image6, // Use the imported image
             inStock: 6,
             fastDelivery: false,
@@ -95,7 +95,7 @@ const CartContext = ({ children }) => {
         {
             id: '7',
             name: 'Milk Choco',
-            price: 29.90,
+            price: 2.90,
             image: image7, // Use the imported image
             inStock: 2,
             fastDelivery: false,
@@ -104,7 +104,7 @@ const CartContext = ({ children }) => {
         {
             id: '8',
             name: 'Simple Choco',
-            price: 29.99,
+            price: 2.99,
             image: image8, // Use the imported image
             inStock: 8,
             fastDelivery: false,
